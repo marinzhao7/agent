@@ -20,7 +20,7 @@ graph TB
         MA5[日报生成 Agent<br/>Daily Report]
     end
 
-    subgraph "Core Services"
+    subgraph Core Services["Core Services"]
         TaskQueue[任务队列<br/>Task Queue]
         Memory[记忆模块<br/>Memory Module]
         Skills[技能注册中心<br/>Skills Registry]
