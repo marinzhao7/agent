@@ -38,13 +38,19 @@ graph TB
     API --> MA2
     API --> MA3
 
-    MA --> MA2
-    MA --> MA3
-    MA --> MA4
-    MA --> MA5
+    MA -.-> MA2
+    MA -.-> MA3
+    MA -.-> MA4
+    MA -.-> MA5
 
-    Agent Layer --> Core Services
-    Core Services --> Data Layer
+    MA2 --> Core Services
+    MA3 --> Core Services
+    MA4 --> Core Services
+    MA5 --> Core Services
+
+    SQLite --> Data Layer
+    JSON --> Data Layer
+    VectorDB --> Data Layer
 ```
 
 ## Agent 交互时序图
