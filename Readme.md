@@ -35,7 +35,8 @@ graph TB
 
     Web --> API
     CLI --> API
-    API --> Agent Layer
+    API --> MA2
+    API --> MA3
 
     MA --> MA2
     MA --> MA3
