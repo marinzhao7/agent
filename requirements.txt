@@ -1,0 +1,47 @@
+# Web 框架
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Agent 框架
+langchain>=0.1.0
+langchain-core>=0.1.0
+langgraph>=0.0.20
+
+# 数据库
+sqlalchemy>=2.0.23
+aiosqlite>=0.19.0
+
+# HTTP 客户端
+httpx>=0.25.0
+requests>=2.31.0
+
+# 任务调度
+apscheduler>=3.10.4
+
+# 日志
+structlog>=23.2.0
+python-dotenv>=1.0.0
+
+# 数据处理
+python-dateutil>=2.8.2
+
+# 测试
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+httpx>=0.25.0
+
+# 代码质量
+black>=23.10.0
+isort>=5.12.0
+flake8>=6.1.0
+mypy>=1.6.0
+
+# 向量数据库（预留）
+chromadb>=0.4.18
+faiss-cpu>=1.7.4
+
+# 其他
+python-multipart>=0.0.6
