@@ -6,13 +6,13 @@
 
 ```mermaid
 graph TB
-    subgraph "Client Layer"
+    subgraph Client["Client Layer"]
         Web[Web UI]
         CLI[CLI 工具]
         API[REST API]
     end
 
-    subgraph "Agent Layer"
+    subgraph Agent["Agent Layer"]
         MA[监管与自愈 Agent<br/>Monitor & Self-healing]
         MA2[成员注册 Agent<br/>Member Registration]
         MA3[项目追踪 Agent<br/>Project Tracking]
@@ -20,14 +20,14 @@ graph TB
         MA5[日报生成 Agent<br/>Daily Report]
     end
 
-    subgraph Core Services["Core Services"]
+    subgraph Core["Core Services"]
         TaskQueue[任务队列<br/>Task Queue]
         Memory[记忆模块<br/>Memory Module]
         Skills[技能注册中心<br/>Skills Registry]
         RAG[RAG 管道<br/>RAG Pipeline]
     end
 
-    subgraph "Data Layer"
+    subgraph Data["Data Layer"]
         SQLite[(SQLite 数据库)]
         JSON[(JSON 文件存储)]
         VectorDB[(向量数据库<br/>Chroma/FAISS)]
@@ -43,14 +43,16 @@ graph TB
     MA -.-> MA4
     MA -.-> MA5
 
-    MA2 --> Core Services
-    MA3 --> Core Services
-    MA4 --> Core Services
-    MA5 --> Core Services
+    MA2 --> Core
+    MA3 --> Core
+    MA4 --> Core
+    MA5 --> Core
 
-    SQLite --> Data Layer
-    JSON --> Data Layer
-    VectorDB --> Data Layer
+    TaskQueue --> Data
+    Memory --> Data
+    Skills --> Data
+    RAG --> Data
+
 ```
 
 ## Agent 交互时序图
